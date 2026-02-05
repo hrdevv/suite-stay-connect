@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* LiftersTouch Apartments Design System
-   Brand Colors: Green #00A651, Orange #FF7A00
+/* Lifters' Suites Design System
+   Brand Colors: Forest Green #166534, Amber #f59e0b
    All colors in HSL format
 */
 
@@ -11,83 +11,93 @@
 
 @layer base {
   :root {
-    --background: 0 0% 99%;
-    --foreground: 160 10% 10%;
+    /* Luxe Slate Background */
+    --background: 210 40% 98%;
+    --foreground: 215 28% 17%;
 
     --card: 0 0% 100%;
-    --card-foreground: 160 10% 10%;
+    --card-foreground: 215 28% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 160 10% 10%;
+    --popover-foreground: 215 28% 17%;
 
-    /* Primary Green #00A651 */
-    --primary: 152 100% 32%;
+    /* Forest Green Primary #166534 */
+    --primary: 142 75% 30%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary Orange #FF7A00 / #f59e0b */
+    /* Deep Forest for hover #14532d */
+    --primary-dark: 143 72% 20%;
+
+    /* Amber Secondary #f59e0b */
     --secondary: 38 92% 50%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 150 10% 96%;
-    --muted-foreground: 160 5% 45%;
+    /* Deep Amber #d97706 */
+    --secondary-dark: 38 90% 43%;
 
-    /* Accent - lighter green */
-    --accent: 152 60% 95%;
-    --accent-foreground: 152 100% 25%;
+    /* Slate muted tones */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - light forest green tint */
+    --accent: 142 40% 95%;
+    --accent-foreground: 142 75% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 150 15% 90%;
-    --input: 150 15% 90%;
-    --ring: 152 100% 32%;
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 142 75% 30%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 152 20% 98%;
-    --sidebar-foreground: 160 10% 20%;
-    --sidebar-primary: 152 100% 32%;
+    --sidebar-background: 142 20% 98%;
+    --sidebar-foreground: 215 28% 17%;
+    --sidebar-primary: 142 75% 30%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 152 30% 95%;
-    --sidebar-accent-foreground: 152 100% 25%;
-    --sidebar-border: 150 15% 90%;
-    --sidebar-ring: 152 100% 32%;
+    --sidebar-accent: 142 30% 95%;
+    --sidebar-accent-foreground: 142 75% 25%;
+    --sidebar-border: 215 20% 90%;
+    --sidebar-ring: 142 75% 30%;
 
-    /* Custom tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(152 100% 32% / 0.9), hsl(38 92% 50% / 0.8));
-    --card-shadow: 0 4px 20px -4px hsl(160 10% 10% / 0.08);
-    --card-shadow-hover: 0 12px 40px -8px hsl(160 10% 10% / 0.15);
-    --text-gradient: linear-gradient(135deg, hsl(152 100% 32%), hsl(38 92% 50%));
+    /* Custom design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(142 75% 30% / 0.85), hsl(38 92% 50% / 0.7));
+    --card-shadow: 0 4px 20px -4px hsl(215 28% 17% / 0.08);
+    --card-shadow-hover: 0 12px 40px -8px hsl(215 28% 17% / 0.15);
+    --text-gradient: linear-gradient(135deg, hsl(142 75% 30%), hsl(38 92% 50%));
   }
 
   .dark {
-    --background: 160 15% 8%;
-    --foreground: 0 0% 98%;
-    --card: 160 15% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: 160 15% 12%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 152 100% 40%;
+    --background: 215 28% 8%;
+    --foreground: 210 40% 98%;
+    --card: 215 28% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 215 28% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 142 75% 40%;
     --primary-foreground: 0 0% 100%;
+    --primary-dark: 142 75% 30%;
     --secondary: 38 92% 55%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 160 15% 18%;
-    --muted-foreground: 150 10% 65%;
-    --accent: 152 40% 20%;
-    --accent-foreground: 152 60% 70%;
+    --secondary-dark: 38 90% 48%;
+    --muted: 215 28% 18%;
+    --muted-foreground: 215 16% 65%;
+    --accent: 142 40% 20%;
+    --accent-foreground: 142 60% 70%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 160 15% 20%;
-    --input: 160 15% 20%;
-    --ring: 152 100% 40%;
-    --sidebar-background: 160 15% 10%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 152 100% 40%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 28% 20%;
+    --input: 215 28% 20%;
+    --ring: 142 75% 40%;
+    --sidebar-background: 215 28% 10%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 142 75% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 160 20% 18%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 160 15% 20%;
-    --sidebar-ring: 152 100% 40%;
+    --sidebar-accent: 215 28% 18%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 215 28% 20%;
+    --sidebar-ring: 142 75% 40%;
   }
 }
 
@@ -132,6 +142,22 @@
     font-style: italic;
     font-weight: 500;
   }
+
+  /* Modern glass effect */
+  .glass-effect {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  /* Premium button glow */
+  .btn-glow {
+    box-shadow: 0 4px 14px 0 hsl(var(--secondary) / 0.39);
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 6px 20px 0 hsl(var(--secondary) / 0.5);
+  }
 }
 
 @layer utilities {
@@ -150,5 +176,10 @@
 
   .pause-animation:hover {
     animation-play-state: paused;
+  }
+
+  /* Responsive text utilities */
+  .text-balance {
+    text-wrap: balance;
   }
 }

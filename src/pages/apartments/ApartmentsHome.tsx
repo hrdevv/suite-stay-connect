@@ -8,7 +8,7 @@
  import { ApartmentsNavigation } from '@/components/apartments/ApartmentsNavigation';
  import { ApartmentsFooter } from '@/components/apartments/ApartmentsFooter';
  import { apartments } from '@/data/apartments';
- import hero3 from '@/assets/apartments/hero-3.jpg';
+ import suite5 from '@/assets/apartments/suite-5.jpg';
  
  const features = [
    {
@@ -117,11 +117,11 @@
                viewport={{ once: true }}
                className="relative overflow-hidden rounded-2xl"
              >
-               <img
-                 src={hero3}
-                 alt="Banquet Hall"
-                 className="aspect-[4/3] w-full object-cover"
-               />
+                <img
+                  src={suite5}
+                  alt="Banquet Hall"
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105"
+                />
              </motion.div>
              
              <motion.div
