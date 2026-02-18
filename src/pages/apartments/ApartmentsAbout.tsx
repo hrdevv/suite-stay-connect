@@ -1,11 +1,29 @@
  import { motion } from 'framer-motion';
- import { Heart, Users, Home, Award } from 'lucide-react';
- import { ApartmentsNavigation } from '@/components/apartments/ApartmentsNavigation';
- import { ApartmentsFooter } from '@/components/apartments/ApartmentsFooter';
- import { Button } from '@/components/ui/button';
- import { Link } from 'react-router-dom';
- import hero1 from '@/assets/apartments/hero-1.jpg';
- import hero2 from '@/assets/apartments/hero-2.jpg';
+import { Heart, Users, Home, Award } from 'lucide-react';
+import { ApartmentsNavigation } from '@/components/apartments/ApartmentsNavigation';
+import { ApartmentsFooter } from '@/components/apartments/ApartmentsFooter';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import hero1 from '@/assets/apartments/hero-1.jpg';
+import hero2 from '@/assets/apartments/hero-2.jpg';
+import suite1 from '@/assets/apartments/suite-1.jpg';
+import suite2 from '@/assets/apartments/suite-2.jpg';
+import suite3 from '@/assets/apartments/suite-3.jpg';
+import suite4 from '@/assets/apartments/suite-4.jpg';
+import suite5 from '@/assets/apartments/suite-5.jpg';
+import suite6 from '@/assets/apartments/suite-6.jpg';
+import suite7 from '@/assets/apartments/suite-7.jpg';
+
+const galleryImages = [
+  { src: suite1, alt: 'Luxury suite living area' },
+  { src: suite2, alt: 'Premium bedroom suite' },
+  { src: suite3, alt: 'Executive suite interior' },
+  { src: suite4, alt: 'Modern apartment lounge' },
+  { src: suite5, alt: 'Elegant dining space' },
+  { src: suite6, alt: 'Spacious family suite' },
+  { src: suite7, alt: 'Deluxe suite bathroom' },
+];
  
  const values = [
    {
@@ -166,8 +184,53 @@
          </div>
        </section>
  
-       {/* CTA */}
-       <section className="bg-primary py-16 md:py-24">
+        {/* Photo Gallery */}
+        <section className="bg-muted py-16 md:py-24">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12 text-center"
+            >
+              <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
+                Our <span className="text-gradient">Spaces</span>
+              </h2>
+              <p className="mx-auto max-w-2xl text-muted-foreground">
+                Take a glimpse into the comfort and elegance that awaits you at Lifters' Suites.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+              {galleryImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08 }}
+                  className={`group relative overflow-hidden rounded-2xl ${
+                    index === 0 ? 'col-span-2 row-span-2' : ''
+                  }`}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    style={{ minHeight: index === 0 ? '360px' : '180px' }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <p className="absolute bottom-3 left-3 text-sm font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    {image.alt}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="bg-primary py-16 md:py-24">
          <div className="container mx-auto px-4 text-center">
            <motion.div
              initial={{ opacity: 0, y: 20 }}
