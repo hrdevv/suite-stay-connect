@@ -48,8 +48,14 @@ const galleryImages = [
    },
  ];
  
- export default function ApartmentsAbout() {
-   return (
+export default function ApartmentsAbout() {
+    const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+    const closeLightbox = () => setLightboxIndex(null);
+    const prevLightbox = () => setLightboxIndex((prev) => prev !== null ? (prev - 1 + galleryImages.length) % galleryImages.length : 0);
+    const nextLightbox = () => setLightboxIndex((prev) => prev !== null ? (prev + 1) % galleryImages.length : 0);
+
+    return (
      <div className="min-h-screen bg-background">
        <ApartmentsNavigation />
        
@@ -213,16 +219,22 @@ const galleryImages = [
                     index === 0 ? 'col-span-2 row-span-2' : ''
                   }`}
                 >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    style={{ minHeight: index === 0 ? '360px' : '180px' }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  <p className="absolute bottom-3 left-3 text-sm font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    {image.alt}
-                  </p>
+                  <button
+                    onClick={() => setLightboxIndex(index)}
+                    className="h-full w-full text-left"
+                    aria-label={`View ${image.alt} fullscreen`}
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      style={{ minHeight: index === 0 ? '360px' : '180px' }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <p className="absolute bottom-3 left-3 text-sm font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      {image.alt}
+                    </p>
+                  </button>
                 </motion.div>
               ))}
             </div>
@@ -250,7 +262,57 @@ const galleryImages = [
          </div>
        </section>
  
-       <ApartmentsFooter />
-     </div>
-   );
- }
+        <ApartmentsFooter />
+
+        {/* Lightbox Modal */}
+        {lightboxIndex !== null && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+            onClick={closeLightbox}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Image lightbox"
+          >
+            <button
+              onClick={closeLightbox}
+              className="absolute right-4 top-4 rounded-full bg-background/20 p-2 text-white transition-colors hover:bg-background/40"
+              aria-label="Close lightbox"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+
+            <button
+              onClick={(e) => { e.stopPropagation(); prevLightbox(); }}
+              className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-background/20 p-3 text-white transition-colors hover:bg-background/40"
+              aria-label="Previous image"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+            </button>
+
+            <motion.img
+              key={lightboxIndex}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.2 }}
+              src={galleryImages[lightboxIndex].src}
+              alt={galleryImages[lightboxIndex].alt}
+              className="max-h-[85vh] max-w-[90vw] rounded-xl object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+            <button
+              onClick={(e) => { e.stopPropagation(); nextLightbox(); }}
+              className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-background/20 p-3 text-white transition-colors hover:bg-background/40"
+              aria-label="Next image"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </button>
+
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-white/70">
+              {lightboxIndex + 1} / {galleryImages.length}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
