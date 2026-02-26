@@ -90,20 +90,22 @@
                  <ChevronRight className="h-6 w-6" />
                </button>
                
-               <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-                 {apartment.images.map((_, idx) => (
-                   <button
-                     key={idx}
-                     onClick={() => setCurrentImageIndex(idx)}
-                     className={`h-2 w-2 rounded-full transition-all ${
-                       idx === currentImageIndex 
-                         ? 'bg-secondary w-6' 
-                         : 'bg-background/70'
-                     }`}
-                     aria-label={`View image ${idx + 1}`}
-                   />
-                 ))}
-               </div>
+                <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+                  {apartment.images.map((img, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentImageIndex(idx)}
+                      className={`h-12 w-16 overflow-hidden rounded-lg border-2 transition-all ${
+                        idx === currentImageIndex 
+                          ? 'border-secondary shadow-lg scale-110' 
+                          : 'border-background/50 opacity-70 hover:opacity-100'
+                      }`}
+                      aria-label={`View image ${idx + 1}`}
+                    >
+                      <img src={img} alt="" className="h-full w-full object-cover" />
+                    </button>
+                  ))}
+                </div>
              </>
            )}
          </div>
