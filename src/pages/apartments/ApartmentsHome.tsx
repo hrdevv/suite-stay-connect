@@ -1,14 +1,15 @@
- import { motion } from 'framer-motion';
- import { MapPin, Sparkles, Shield, HeadphonesIcon, ArrowRight } from 'lucide-react';
- import { Link } from 'react-router-dom';
- import { Button } from '@/components/ui/button';
- import { HeroSlider } from '@/components/apartments/HeroSlider';
- import { ApartmentCarousel } from '@/components/apartments/ApartmentCarousel';
- import { FeatureCard } from '@/components/apartments/FeatureCard';
- import { ApartmentsNavigation } from '@/components/apartments/ApartmentsNavigation';
- import { ApartmentsFooter } from '@/components/apartments/ApartmentsFooter';
- import { apartments } from '@/data/apartments';
- import suite5 from '@/assets/apartments/suite-5.jpg';
+import { motion } from 'framer-motion';
+import { MapPin, Sparkles, Shield, HeadphonesIcon, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { HeroSlider } from '@/components/apartments/HeroSlider';
+import { ApartmentCarousel } from '@/components/apartments/ApartmentCarousel';
+import { FeatureCard } from '@/components/apartments/FeatureCard';
+import { ApartmentsNavigation } from '@/components/apartments/ApartmentsNavigation';
+import { ApartmentsFooter } from '@/components/apartments/ApartmentsFooter';
+import { apartments } from '@/data/apartments';
+import { TestimonialsSection } from '@/components/apartments/TestimonialsSection';
+import suite5 from '@/assets/apartments/suite-5.jpg';
  
  const features = [
    {
@@ -156,32 +157,35 @@
          </div>
        </section>
  
-       {/* CTA Section */}
-       <section className="bg-primary py-16 md:py-24">
-         <div className="container mx-auto px-4 text-center">
-           <motion.div
-             initial={{ opacity: 0, y: 20 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-           >
-             <h2 className="mb-4 text-3xl font-bold text-primary-foreground md:text-4xl">
-               Ready to Experience Comfort?
-             </h2>
-             <p className="mx-auto mb-8 max-w-2xl text-primary-foreground/80">
-               Book your stay today and be part of a mission that empowers communities. 
-               Your comfort, our commitment.
-             </p>
-             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-               <Button asChild variant="hero" size="xl">
-                 <Link to="/apartments/listings">Browse Apartments</Link>
-               </Button>
-               <Button asChild variant="hero-outline" size="xl">
-                 <Link to="/apartments/contact">Contact Us</Link>
-               </Button>
-             </div>
-           </motion.div>
-         </div>
-       </section>
+        {/* Testimonials */}
+        <TestimonialsSection />
+
+        {/* CTA Section */}
+        <section className="bg-primary py-16 md:py-24">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="mb-4 text-3xl font-bold text-primary-foreground md:text-4xl">
+                Ready to Experience Comfort?
+              </h2>
+              <p className="mx-auto mb-8 max-w-2xl text-primary-foreground/80">
+                Book your stay today and be part of a mission that empowers communities. 
+                Your comfort, our commitment.
+              </p>
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <Button asChild variant="hero" size="xl">
+                  <Link to="/apartments/listings">Browse Apartments</Link>
+                </Button>
+                <Button asChild variant="hero-outline" size="xl">
+                  <Link to="/apartments/contact">Contact Us</Link>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
  
        <ApartmentsFooter />
      </div>
