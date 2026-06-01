@@ -121,7 +121,7 @@
                <div className="text-center">
                  <MapPin className="mx-auto mb-4 h-12 w-12 text-muted-foreground" />
                  <p className="text-muted-foreground">
-                   Located across Lagos & Ogun States, Nigeria
+                   7, Amikanle Road, off AIT Road, Kola Alagbado, Lagos State
                  </p>
                </div>
              </div>
