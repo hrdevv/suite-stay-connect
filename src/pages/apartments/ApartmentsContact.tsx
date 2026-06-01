@@ -8,23 +8,23 @@
  const contactInfo = [
    {
      icon: MapPin,
-     title: 'Address',
-     content: 'Lagos & Ogun States, Nigeria',
+     title: 'Our Location',
+     content: '7, Amikanle Road, off AIT Road, Kola Alagbado, Lagos State',
    },
    {
      icon: Phone,
-     title: 'Phone',
-     content: '+234 XXX XXX XXXX',
+     title: 'Phone Number',
+     content: '+234 812 111 3281',
    },
    {
      icon: Mail,
-     title: 'Email',
-     content: 'apartments@lifterstouch.org',
+     title: 'Email Address',
+     content: 'info@suites.lifterscenter.org',
    },
    {
      icon: Clock,
-     title: 'Hours',
-     content: 'Mon - Sun: 24/7 Support',
+     title: 'Working Hours',
+     content: '24/7 Front Desk Support',
    },
  ];
  
