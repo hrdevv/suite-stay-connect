@@ -205,7 +205,7 @@
                      <Link to="/apartments/contact">Make an Inquiry</Link>
                    </Button>
                    <Button asChild variant="outline" size="lg" className="w-full">
-                     <a href="https://wa.me/+234XXXXXXXXX" target="_blank" rel="noopener noreferrer">
+                     <a href="https://wa.me/2348121113281" target="_blank" rel="noopener noreferrer">
                        WhatsApp Us
                      </a>
                    </Button>
