@@ -6,13 +6,12 @@
  import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
  import { toast } from 'sonner';
  
- const inquiryTypes = [
-   'Apartment Booking',
-   'Banquet Hall',
-   'Event Space',
-   'Corporate Housing',
-   'Other',
- ];
+const inquiryTypes = [
+  'Short-Stay Apartment',
+  'Banquet Hall',
+  'Corporate Housing',
+  'Other Inquiry',
+];
  
  export function ContactForm() {
    const [isSubmitting, setIsSubmitting] = useState(false);

@@ -93,8 +93,8 @@ export default function ApartmentsContact() {
               >
                 <h2 className="mb-4 text-2xl font-bold text-foreground md:mb-6">Get in Touch</h2>
                 <p className="mb-6 text-muted-foreground md:mb-8">
-                  Have questions about our apartments or services? We'd love to hear from you. Send
-                  us a message and we'll respond as soon as possible.
+                  Our team is available 24/7 to assist you. Reach out anytime — we'll respond
+                  promptly and help you plan the perfect stay or event.
                 </p>
 
                 <ul className="space-y-5">
