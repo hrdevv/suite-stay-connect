@@ -88,15 +88,15 @@
              <ul className="space-y-3">
                <li className="flex items-start gap-3 text-sm text-background/70">
                  <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0" />
-                 <span>Lagos & Ogun States, Nigeria</span>
+                 <span>7, Amikanle Road, off AIT Road, Kola Alagbado, Lagos State</span>
                </li>
                <li className="flex items-center gap-3 text-sm text-background/70">
                  <Phone className="h-4 w-4 flex-shrink-0" />
-                 <span>+234 XXX XXX XXXX</span>
+                 <a href="tel:+2348121113281" className="hover:text-background transition-colors break-all">+234 812 111 3281</a>
                </li>
                <li className="flex items-center gap-3 text-sm text-background/70">
                  <Mail className="h-4 w-4 flex-shrink-0" />
-                 <span>apartments@lifterstouch.org</span>
+                 <a href="mailto:info@suites.lifterscenter.org" className="hover:text-background transition-colors break-all">info@suites.lifterscenter.org</a>
                </li>
              </ul>
            </div>
