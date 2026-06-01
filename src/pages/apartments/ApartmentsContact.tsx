@@ -8,23 +8,23 @@
  const contactInfo = [
    {
      icon: MapPin,
-     title: 'Address',
-     content: 'Lagos & Ogun States, Nigeria',
+     title: 'Our Location',
+     content: '7, Amikanle Road, off AIT Road, Kola Alagbado, Lagos State',
    },
    {
      icon: Phone,
-     title: 'Phone',
-     content: '+234 XXX XXX XXXX',
+     title: 'Phone Number',
+     content: '+234 812 111 3281',
    },
    {
      icon: Mail,
-     title: 'Email',
-     content: 'apartments@lifterstouch.org',
+     title: 'Email Address',
+     content: 'info@suites.lifterscenter.org',
    },
    {
      icon: Clock,
-     title: 'Hours',
-     content: 'Mon - Sun: 24/7 Support',
+     title: 'Working Hours',
+     content: '24/7 Front Desk Support',
    },
  ];
  
@@ -85,10 +85,10 @@
                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                          <info.icon className="h-6 w-6" />
                        </div>
-                       <div>
-                         <h3 className="font-semibold text-foreground">{info.title}</h3>
-                         <p className="text-muted-foreground">{info.content}</p>
-                       </div>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-semibold text-foreground">{info.title}</h3>
+                          <p className="text-muted-foreground break-words">{info.content}</p>
+                        </div>
                      </div>
                    ))}
                  </div>
@@ -121,7 +121,7 @@
                <div className="text-center">
                  <MapPin className="mx-auto mb-4 h-12 w-12 text-muted-foreground" />
                  <p className="text-muted-foreground">
-                   Located across Lagos & Ogun States, Nigeria
+                   7, Amikanle Road, off AIT Road, Kola Alagbado, Lagos State
                  </p>
                </div>
              </div>

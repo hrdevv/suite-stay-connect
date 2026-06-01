@@ -75,7 +75,7 @@
              name="phone"
              type="tel"
              required
-             placeholder="+234 XXX XXX XXXX"
+             placeholder="+234 812 111 3281"
              className="bg-background"
            />
          </div>
