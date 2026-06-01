@@ -85,10 +85,10 @@
                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                          <info.icon className="h-6 w-6" />
                        </div>
-                       <div>
-                         <h3 className="font-semibold text-foreground">{info.title}</h3>
-                         <p className="text-muted-foreground">{info.content}</p>
-                       </div>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-semibold text-foreground">{info.title}</h3>
+                          <p className="text-muted-foreground break-words">{info.content}</p>
+                        </div>
                      </div>
                    ))}
                  </div>
