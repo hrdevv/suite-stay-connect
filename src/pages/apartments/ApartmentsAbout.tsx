@@ -61,7 +61,7 @@ export default function ApartmentsAbout() {
        <section className="relative h-[50vh] min-h-[400px]">
          <img
            src={hero1}
-           alt="About Lifters' Suites"
+           alt="About Lifters' Apartments"
            className="absolute inset-0 h-full w-full object-cover"
          />
          <div className="hero-overlay absolute inset-0" />
@@ -98,7 +98,7 @@ export default function ApartmentsAbout() {
                </h2>
                <div className="space-y-4 text-muted-foreground">
                  <p>
-                   Lifters' Suites is a social enterprise initiative proudly supporting 
+                   Lifters' Apartments is a social enterprise initiative proudly supporting 
                    the mission of Lifter's Touch Empowerment Foundation. We believe that 
                    quality hospitality can be a powerful force for positive change.
                  </p>
@@ -201,7 +201,7 @@ export default function ApartmentsAbout() {
                 Our <span className="text-gradient">Spaces</span>
               </h2>
               <p className="mx-auto max-w-2xl text-muted-foreground">
-                Take a glimpse into the comfort and elegance that awaits you at Lifters' Suites.
+                Take a glimpse into the comfort and elegance that awaits you at Lifters' Apartments.
               </p>
             </motion.div>
 

@@ -3,7 +3,7 @@ import { MapPin, Sparkles, Shield, HeadphonesIcon, ArrowRight } from 'lucide-rea
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { HeroSlider } from '@/components/apartments/HeroSlider';
-import { ApartmentCarousel } from '@/components/apartments/ApartmentCarousel';
+import { ApartmentCard } from '@/components/apartments/ApartmentCard';
 import { FeatureCard } from '@/components/apartments/FeatureCard';
 import { ApartmentsNavigation } from '@/components/apartments/ApartmentsNavigation';
 import { ApartmentsFooter } from '@/components/apartments/ApartmentsFooter';
@@ -52,7 +52,7 @@ import suite5 from '@/assets/apartments/suite-5.jpg';
              className="mb-12 text-center"
            >
              <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
-               Why Choose <span className="text-gradient">Lifters' Suites</span>
+               Why Choose <span className="text-gradient">Lifters' Apartments</span>
              </h2>
              <p className="mx-auto max-w-2xl text-muted-foreground">
                Experience premium hospitality that makes a difference. Every stay supports 
@@ -98,7 +98,11 @@ import suite5 from '@/assets/apartments/suite-5.jpg';
              </Button>
            </motion.div>
  
-           <ApartmentCarousel apartments={apartments.filter(a => a.featured)} />
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+              {apartments.filter((a) => a.featured).map((apt, i) => (
+                <ApartmentCard key={apt.id} apartment={apt} index={i} />
+              ))}
+            </div>
  
            <div className="mt-8 text-center md:hidden">
              <Button asChild variant="cta">

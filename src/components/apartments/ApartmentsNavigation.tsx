@@ -23,7 +23,7 @@
            {/* Logo */}
            <Link to="/apartments" className="flex items-center gap-2">
              <span className="font-stylish text-2xl text-primary md:text-3xl">
-               Lifters' Suites
+               Lifters' Apartments
              </span>
            </Link>
  

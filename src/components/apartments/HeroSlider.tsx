@@ -54,7 +54,7 @@ export function HeroSlider() {
           >
             <img
               src={shuffledImages[currentIndex]}
-              alt={`Lifters' Suites showcase ${currentIndex + 1}`}
+              alt={`Lifters' Apartments showcase ${currentIndex + 1}`}
               className="h-full w-full object-cover"
             />
           </motion.div>
@@ -81,7 +81,7 @@ export function HeroSlider() {
           />
           
           <h1 className="font-stylish mb-6 text-4xl leading-tight text-primary-foreground sm:text-5xl md:text-7xl lg:text-8xl">
-            Lifters' Suites
+            Lifters' Apartments
           </h1>
           
           <p className="mx-auto mb-8 max-w-2xl text-base text-primary-foreground/90 sm:text-lg md:text-xl">
