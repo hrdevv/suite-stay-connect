@@ -23,7 +23,7 @@
          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
            {/* Brand */}
            <div>
-             <h3 className="font-stylish mb-4 text-2xl">Lifters' Suites</h3>
+             <h3 className="font-stylish mb-4 text-2xl">Lifters' Apartments</h3>
              <p className="mb-4 text-sm text-background/70">
                A social enterprise initiative supporting the mission of Lifter's 
                Touch Empowerment Foundation. Your stay supports community empowerment.
@@ -103,7 +103,7 @@
          </div>
  
          <div className="mt-12 border-t border-background/20 pt-8 text-center text-sm text-background/50">
-           <p>© {new Date().getFullYear()} Lifters' Suites. All rights reserved.</p>
+           <p>© {new Date().getFullYear()} Lifters' Apartments. All rights reserved.</p>
            <p className="mt-1">
              A project of{' '}
              <a href="#" className="text-secondary hover:underline">

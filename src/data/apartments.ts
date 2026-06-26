@@ -1,7 +1,5 @@
 import apt1 from '@/assets/apartments/apt-1.jpg';
 import apt2 from '@/assets/apartments/apt-2.jpg';
-import apt3 from '@/assets/apartments/apt-3.jpg';
-import apt4 from '@/assets/apartments/apt-4.jpg';
 // New suite images
 import suite1 from '@/assets/apartments/suite-1.jpg';
 import suite2 from '@/assets/apartments/suite-2.jpg';
@@ -33,19 +31,23 @@ export interface Service {
   image: string;
 }
 
+// Single location — matches Contact page
+export const LOCATION = '7, Amikanle Road, off AIT Road, Kola Alagbado, Lagos State';
+
 // Hero slider uses the new luxury suite images
 export const heroImages = [suite1, suite3, suite4, suite6];
 
 export const apartments: Apartment[] = [
   {
-    id: 'serene-studio',
-    name: 'Serene Studio',
-    location: 'Ikeja, Lagos',
-    pricePerNight: 25000,
+    id: 'standard-room',
+    name: 'Standard Room',
+    location: LOCATION,
+    pricePerNight: 99999,
     bedrooms: 1,
     bathrooms: 1,
-    amenities: ['WiFi', 'AC', 'TV', 'Kitchen'],
-    description: 'A cozy and elegant studio apartment in the heart of Ikeja. Perfect for business travelers and solo adventurers seeking comfort and convenience. Features modern amenities and is close to shopping centers and restaurants.',
+    amenities: ['WiFi', 'AC', 'TV', 'Kitchenette'],
+    description:
+      'A comfortable, fully furnished room designed for restful short stays. Includes modern amenities, en-suite bathroom, and 24/7 front-desk support — perfect for solo travellers and couples.',
     images: [suite1, suite5, suite3, suite7, apt1],
     houseRules: ['No smoking', 'No parties', 'Check-in after 2 PM', 'Check-out before 12 PM'],
     featured: true,
@@ -53,40 +55,15 @@ export const apartments: Apartment[] = [
   {
     id: 'executive-suite',
     name: 'Executive Suite',
-    location: 'Lekki, Lagos',
-    pricePerNight: 45000,
+    location: LOCATION,
+    pricePerNight: 119999,
     bedrooms: 2,
     bathrooms: 2,
-    amenities: ['WiFi', 'AC', 'Kitchen', 'Parking', 'Pool'],
-    description: 'Luxurious executive suite in the upscale Lekki area. This spacious 2-bedroom apartment offers premium finishes, a fully equipped kitchen, and access to a swimming pool. Ideal for families and business executives.',
-    images: [suite3, suite4, suite1, suite6, apt2],
-    houseRules: ['No smoking', 'Pets allowed', 'Check-in after 3 PM', 'Check-out before 11 AM'],
-    featured: true,
-  },
-  {
-    id: 'family-comfort',
-    name: 'Family Comfort',
-    location: 'Abeokuta, Ogun',
-    pricePerNight: 35000,
-    bedrooms: 3,
-    bathrooms: 2,
-    amenities: ['WiFi', 'AC', 'Garden', 'Security', 'Parking'],
-    description: 'A spacious family apartment with a beautiful garden view in the serene city of Abeokuta. Features 3 bedrooms, modern amenities, and 24/7 security. Perfect for family gatherings and extended stays.',
-    images: [suite6, suite7, suite2, suite5, apt3],
-    houseRules: ['No smoking', 'Pets allowed', 'Quiet hours 10 PM - 7 AM', 'Check-in after 2 PM'],
-    featured: true,
-  },
-  {
-    id: 'premium-penthouse',
-    name: 'Premium Penthouse',
-    location: 'Victoria Island, Lagos',
-    pricePerNight: 75000,
-    bedrooms: 3,
-    bathrooms: 3,
-    amenities: ['WiFi', 'AC', 'Ocean View', 'Pool', 'Gym', 'Concierge'],
-    description: 'Experience luxury living in this stunning penthouse overlooking the Lagos lagoon. Features panoramic ocean views, world-class amenities, private pool access, and 24/7 concierge service.',
-    images: [suite2, suite1, suite4, suite3, apt4],
-    houseRules: ['No smoking', 'No parties', 'Check-in after 3 PM', 'Check-out before 12 PM'],
+    amenities: ['WiFi', 'AC', 'Kitchen', 'Sitting Room', 'Parking'],
+    description:
+      'Spacious 2-bedroom suite featuring 2 toilets, a generous sitting room, and a fully equipped kitchen with all the necessities. Ideal for families, executives, and longer stays.',
+    images: [suite3, suite4, suite1, suite6, suite2, apt2],
+    houseRules: ['No smoking', 'No parties', 'Check-in after 2 PM', 'Check-out before 12 PM'],
     featured: true,
   },
 ];
