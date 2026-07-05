@@ -64,17 +64,25 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        /* Brand colors for direct use */
-        brand: {
-          forest: "hsl(142 75% 30%)",
-          "forest-dark": "hsl(143 72% 20%)",
-          amber: "hsl(38 92% 50%)",
-          "amber-dark": "hsl(38 90% 43%)",
-          slate: {
-            light: "hsl(210 40% 98%)",
-            dark: "hsl(215 28% 17%)",
-            400: "hsl(215 16% 65%)",
-          },
+        /* Coastal brand tokens for direct use */
+        ocean: {
+          DEFAULT: "hsl(195 55% 22%)",
+          dark: "hsl(200 60% 14%)",
+          light: "hsl(195 40% 93%)",
+        },
+        sand: {
+          DEFAULT: "hsl(35 55% 62%)",
+          dark: "hsl(32 45% 50%)",
+        },
+        midnight: {
+          DEFAULT: "hsl(220 25% 10%)",
+          deep: "hsl(220 30% 6%)",
+        },
+        mist: {
+          DEFAULT: "hsl(210 25% 97%)",
+          200: "hsl(210 20% 94%)",
+          400: "hsl(215 15% 65%)",
+          600: "hsl(215 14% 42%)",
         },
       },
       borderRadius: {
