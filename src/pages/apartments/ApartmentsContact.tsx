@@ -4,24 +4,22 @@ import { ApartmentsNavigation } from '@/components/apartments/ApartmentsNavigati
 import { ApartmentsFooter } from '@/components/apartments/ApartmentsFooter';
 import { ContactForm } from '@/components/apartments/ContactForm';
 import { Button } from '@/components/ui/button';
+import { business } from '@/config/business';
 import hero2 from '@/assets/apartments/hero-2.jpg';
 
-const ADDRESS = '7, Amikanle Road, off AIT Road, Kola Alagbado, Lagos State';
-const PHONE_DISPLAY = '+234 812 111 3281';
-const PHONE_TEL = '+2348121113281';
-const EMAIL = 'info@suites.lifterscenter.org';
-const MAP_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(
-  'Amikanle Road, Kola Alagbado, Lagos, Nigeria'
-)}&output=embed`;
-const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  'Amikanle Road, Kola Alagbado, Lagos, Nigeria'
-)}`;
+const ADDRESS = business.location.address;
+const PHONE_DISPLAY = business.contact.phoneDisplay;
+const PHONE_TEL = business.contact.phoneTel;
+const EMAIL = business.contact.email;
+const WHATSAPP = business.contact.whatsapp;
+const MAP_EMBED = business.location.mapsEmbedUrl;
+const MAP_LINK = business.location.mapsLink;
 
 const contactInfo = [
   { icon: MapPin, title: 'Our Location', content: ADDRESS },
   { icon: Phone, title: 'Phone Number', content: PHONE_DISPLAY },
   { icon: Mail, title: 'Email Address', content: EMAIL },
-  { icon: Clock, title: 'Working Hours', content: '24/7 Front Desk Support' },
+  { icon: Clock, title: 'Working Hours', content: business.contact.hours },
 ];
 
 export default function ApartmentsContact() {
@@ -68,7 +66,7 @@ export default function ApartmentsContact() {
             </Button>
             <Button asChild variant="outline" size="lg" className="w-full">
               <a
-                href={`https://wa.me/${PHONE_TEL.replace('+', '')}`}
+                href={`https://wa.me/${WHATSAPP}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat on WhatsApp"
