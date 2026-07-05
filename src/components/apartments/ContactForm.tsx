@@ -1,17 +1,13 @@
- import { useState } from 'react';
- import { motion } from 'framer-motion';
- import { Button } from '@/components/ui/button';
- import { Input } from '@/components/ui/input';
- import { Textarea } from '@/components/ui/textarea';
- import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
- import { toast } from 'sonner';
- 
-const inquiryTypes = [
-  'Short-Stay Apartment',
-  'Banquet Hall',
-  'Corporate Housing',
-  'Other Inquiry',
-];
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { toast } from 'sonner';
+import { business } from '@/config/business';
+
+const inquiryTypes = business.inquiryTypes;
  
  export function ContactForm() {
    const [isSubmitting, setIsSubmitting] = useState(false);
@@ -73,9 +69,9 @@ const inquiryTypes = [
              id="phone"
              name="phone"
              type="tel"
-             required
-             placeholder="+234 812 111 3281"
-             className="bg-background"
+            required
+            placeholder={business.contact.phoneDisplay}
+            className="bg-background"
            />
          </div>
          <div>

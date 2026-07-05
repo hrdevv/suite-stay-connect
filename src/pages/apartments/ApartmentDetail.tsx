@@ -7,7 +7,8 @@
  import { Button } from '@/components/ui/button';
  import { Badge } from '@/components/ui/badge';
  import { ApartmentCard } from '@/components/apartments/ApartmentCard';
- import { apartments } from '@/data/apartments';
+  import { apartments } from '@/data/apartments';
+  import { business } from '@/config/business';
  
  const amenityIcons: Record<string, React.ReactNode> = {
    WiFi: <Wifi className="h-5 w-5" />,
@@ -205,9 +206,9 @@
                      <Link to="/apartments/contact">Make an Inquiry</Link>
                    </Button>
                    <Button asChild variant="outline" size="lg" className="w-full">
-                     <a href="https://wa.me/2348121113281" target="_blank" rel="noopener noreferrer">
-                       WhatsApp Us
-                     </a>
+                    <a href={`https://wa.me/${business.contact.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                      WhatsApp Us
+                    </a>
                    </Button>
                  </div>
  
